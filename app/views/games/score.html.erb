@@ -1,0 +1,10 @@
+<% if @valid %>
+  Congratulations! <strong><%= @word %></strong> is a valid English word!
+<% elsif @inarray %>
+  Sorry but <strong><%= @word %></strong> does not seem to be a valid English word..
+<% else %>
+    Sorry but <strong><%= @word  %></strong> can't be built out of <strong><%= @letters.join(',') %></strong>
+<% end %>
+
+<br>
+<%= link_to "Play again", new_path, class: "btn btn-link" %>
